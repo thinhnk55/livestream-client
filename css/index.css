@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  min-width: 500px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
