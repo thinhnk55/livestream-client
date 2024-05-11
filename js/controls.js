@@ -4,6 +4,18 @@ function formatToVND(number) {
     formattedNumber += " VND";
     return formattedNumber;
 }
+function formatMessage(message) {
+    if(message.startsWith("MBVCB")){
+       var indices = [];
+      var index = -1;
+      // Loop until there are no more occurrences of "."
+      while ((index = message.indexOf('.', index + 1)) !== -1) {
+          indices.push(index);
+      }
+      return message.substring(indices[2]+1, indices[3]);
+    }
+    return message;
+}
 
 function hideMessage(){
     isShowingMessage = false;
@@ -37,7 +49,7 @@ function showMessage(amount, message){
     var amountElement = document.getElementById("amount");
     amountElement.textContent = formatToVND(amount);
     var messageElement = document.getElementById("message");
-    messageElement.textContent = message;
+    messageElement.textContent = formatMessage(message);
     setTimeout(hideMessage, 20000);
 }
 function tingting(){
