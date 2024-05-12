@@ -8,7 +8,6 @@ function formatMessage(message) {
     if(message.startsWith("MBVCB")){
        var indices = [];
       var index = -1;
-      // Loop until there are no more occurrences of "."
       while ((index = message.indexOf('.', index + 1)) !== -1) {
           indices.push(index);
       }
@@ -45,7 +44,7 @@ function showMessage(amount, message){
     amountElement.textContent = formatToVND(amount);
     var messageElement = document.getElementById("message");
     messageElement.textContent = formatMessage(message);
-    setTimeout(hideMessage, 20000);
+    setTimeout(hideAll, 20000);
 }
 function tingting(){
     var audio = new Audio('audio/ting.mp3');
