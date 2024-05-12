@@ -35,9 +35,6 @@ function showStartButton(){
 function showMessage(amount, message){
     isShowingMessage = true;
     tingting();
-    setTimeout(function() {
-        tingting();
-    }, 200);
     let donation = document.getElementById("donation");
     donation.style.display = 'block';
     var amountElement = document.getElementById("amount");
@@ -47,7 +44,7 @@ function showMessage(amount, message){
     setTimeout(hideAll, 20000);
 }
 function tingting(){
-    var audio = new Audio('audio/ting.mp3');
+    var audio = new Audio('audio/tingting.mp3');
     audio.play();
 }
 
