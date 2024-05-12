@@ -7,6 +7,7 @@ function updateDonation(){
         url: list_donation_url,
         method: 'GET',
         headers: {
+            'Access-Control-Allow-Origin':'*',
             'token': token
         },
         success: function(response) {

@@ -1,1 +1,1 @@
-hideAll();
+showStartButton();
