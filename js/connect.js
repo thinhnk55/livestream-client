@@ -1,4 +1,4 @@
-var list_donation_url = "http://api.congdongaoe.com/pw/donation/list";
+var list_donation_url = "https://api.congdongaoe.com/pw/donation/list";
 var token = "pw-SLQOP4556acoqwke";
 var last_id = 0;
 var waitingDonation = [];
