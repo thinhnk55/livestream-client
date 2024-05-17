@@ -1,0 +1,16 @@
+button {
+  margin: auto;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  row-gap: 10px;
+}
+.feature {
+  margin: auto;
+}

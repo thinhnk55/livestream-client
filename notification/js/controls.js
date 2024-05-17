@@ -1,20 +1,4 @@
 var isShowingMessage = false;
-function formatToVND(number) {
-    var formattedNumber = number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    formattedNumber += " VND";
-    return formattedNumber;
-}
-function formatMessage(message) {
-    if(message.startsWith("MBVCB")){
-       var indices = [];
-      var index = -1;
-      while ((index = message.indexOf('.', index + 1)) !== -1) {
-          indices.push(index);
-      }
-      return message.substring(indices[2]+1, indices[3]);
-    }
-    return message;
-}
 
 function hideAll(){
     isShowingMessage = false;
@@ -25,14 +9,14 @@ function hideAll(){
 }
 
 function showStartButton(){
-    isShowingMessage = false;
-    let donation = document.getElementById("donation");
-    donation.style.display = 'none';
+    isShowingMessage = true;
     let bt3 = document.getElementById("bt3");
     bt3.style.display = 'block';
+    let donation = document.getElementById("donation");
+    donation.style.display = 'block';
 }
 
-function showMessage(amount, message){
+function showMessage(amount, message, timeout){
     isShowingMessage = true;
     tingting();
     let donation = document.getElementById("donation");
@@ -41,7 +25,7 @@ function showMessage(amount, message){
     amountElement.textContent = formatToVND(amount);
     var messageElement = document.getElementById("message");
     messageElement.textContent = formatMessage(message);
-    setTimeout(hideAll, 20000);
+    setTimeout(hideAll, timeout);
 }
 function tingting(){
     var audio = new Audio('audio/tingting.mp3');
@@ -50,5 +34,6 @@ function tingting(){
 
 $("#bt3").on("click", function(){
     hideAll();
+    showMessage(10000, "Chuc cho giai dau AOE TOURNAMENT thanh cong tot dep", 2000);
 });
 

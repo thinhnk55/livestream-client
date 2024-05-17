@@ -60,7 +60,7 @@ function loopListDonation(){
 function onNewDonation(){
     if(!isShowingMessage && waitingDonation.length > 0){
         var lastElement = waitingDonation.pop();
-        showMessage(lastElement.amount, lastElement.message);
+        showMessage(lastElement.amount, lastElement.message, 20000);
     }
 }
 
