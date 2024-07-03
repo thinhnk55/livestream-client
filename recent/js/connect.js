@@ -1,5 +1,5 @@
 var list_donation_url =
-  "https://api.congdongaoe.com/pw/donation/list?page=0&limit=" + limit;
+  "https://api.godoo.asia/pw/donation/list?page=0&limit=" + limit;
 var token = "pw-SLQOP4556acoqwke";
 var last_id = 0;
 var waitingDonation = [];
